@@ -1,0 +1,280 @@
+/* ============================ */
+/* Variables globales          */
+/* ============================ */
+:root {
+  --neon-green:  #39ff14;
+  --neon-teal:   #00f5d4;
+  --bg-color:    #000;
+  --text-color:  #e5e5e5;
+}
+
+/* ============================ */
+/* Reset y globales             */
+/* ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Rajdhani', sans-serif;
+  line-height: 1.6;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ============================ */
+/* Encabezados                  */
+/* ============================ */
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--neon-green);
+  animation: neonFlicker 3s infinite ease-in-out;
+}
+
+/* ============================ */
+/* Línea divisoria              */
+/* ============================ */
+hr {
+  border: none;
+  height: 2px;
+  background: var(--neon-green);
+  margin: 2rem 0;
+}
+
+/* ============================ */
+/* Menú neón                     */
+/* ============================ */
+.neon-menu {
+  width: 100%;
+  background: linear-gradient(90deg, var(--neon-green), var(--neon-teal));
+  padding: 0.5rem 0;
+  box-shadow: 0 0 10px var(--neon-green);
+  margin-bottom: 2rem;
+}
+
+.neon-menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.neon-menu a {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.neon-menu a:hover {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px var(--neon-teal),
+    0 0 20px var(--neon-teal);
+}
+
+/* ============================ */
+/* Animación flicker            */
+/* ============================ */
+@keyframes neonFlicker {
+  0%,100% {
+    color: var(--neon-green);
+    text-shadow:
+      0 0 4px var(--neon-green),
+      0 0 10px var(--neon-green);
+  }
+  50% {
+    color: var(--neon-teal);
+    text-shadow:
+      0 0 4px var(--neon-teal),
+      0 0 10px var(--neon-teal);
+  }
+}
+
+/* ============================ */
+/* Secciones centrales          */
+/* ============================ */
+section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: rgba(255,255,255,0.03);
+}
+
+section p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ============================ */
+/* Servicios en grid            */
+/* ============================ */
+#servicios {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  background: rgba(0,0,0,0.3);
+  border: 2px solid var(--neon-green);
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card i {
+  font-size: 3rem;
+  color: var(--neon-green);
+  margin-bottom: 0.5rem;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.service-card h3 {
+  color: var(--neon-green);
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  border-color: var(--neon-teal);
+  box-shadow:
+    0 0 8px var(--neon-teal),
+    0 0 16px rgba(0,245,212,0.5);
+}
+
+.service-card:hover i {
+  color: var(--neon-teal);
+  text-shadow:
+    0 0 8px var(--neon-teal),
+    0 0 16px rgba(0,245,212,0.5);
+}
+
+/* ============================ */
+/* Formulario de Contacto       */
+/* ============================ */
+#contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  color: var(--neon-green);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--neon-green);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text-color);
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--neon-teal);
+  outline: none;
+}
+
+#contacto button {
+  background: var(--neon-green);
+  border: none;
+  color: var(--bg-color);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#contacto button:hover {
+  background: var(--neon-teal);
+}
+
+.form-response {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--neon-teal);
+}
+
+/* ============================ */
+/* Adaptaciones móviles         */
+/* ============================ */
+@media (max-width: 600px) {
+  body { padding: 0.5rem; }
+  section { padding: 1.5rem 0.5rem; }
+  .neon-menu a { font-size: 1rem; padding: 0.4rem 0.8rem; }
+}
+
+/* Formulario compacto */
+#contacto form {
+  max-width: 500px; /* más estrecho */
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 0.75rem; /* menos espacio entre campos */
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.5rem;      /* menos padding interno */
+  font-size: 0.95rem;   /* tamaño de texto ligeramente menor */
+}
+
+#contacto textarea {
+  resize: vertical;     /* permite solo cambio de alto */
+}
+
+#contacto button {
+  padding: 0.5rem 1rem;  /* botón más compacto */
+  font-size: 0.9rem;
+}
+
+.form-response {
+  margin-top: 0.75rem;  /* menos separación tras enviar */
+  font-size: 0.9rem;
+}
