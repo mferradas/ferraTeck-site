@@ -3,196 +3,224 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FerraTeck Systems</title>
+  <meta name="description" content="Sistemas de seguridad IoT, Alarmas inteligentes y Monitoreo sin intermediarios en Argentina.">
+  <title>FerraTeck Systems | Seguridad IoT</title>
 
-  <!-- Fuentes -->
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rajdhani:wght@400;500&display=swap" 
-    rel="stylesheet" 
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Hoja de estilos -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
-    <h1>FerraTeck Systems</h1>
+    <div class="logo-container">
+      <h1>FerraTeck <span class="highlight">Systems</span></h1>
+    </div>
     <nav class="neon-menu">
       <ul>
         <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#packs">Packs</a></li>
+        <li><a href="#planes">Suscripción</a></li>
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#sobremi">Sobre mí</a></li>
-        <li><a href="#soporte">Soporte</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#contacto" class="btn-nav">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="inicio">
-    <h2>Bienvenidos</h2>
-    <p>
-      En FerraTeck Systems brindamos soluciones integrales en seguridad,
-      automatización e IoT, diseñadas y desarrolladas íntegramente por mí.
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h2>Seguridad Inteligente, <br>Sin Intermediarios.</h2>
+      <p>
+        Protege tu hogar con tecnología IoT desarrollada a medida. 
+        Alarmas WiFi + GSM, monitoreo en tu celular y soporte directo por su creador.
       </p>
-      <p>
-      Gracias a este enfoque 100% personalizado, nuestras propuestas resultan
-      mucho más económicas que las de compañías convencionales, sin renunciar
-      a la calidad ni la confiabilidad.
-    </p>
-    <p>
-      Te invito a conocer cómo puedo ayudarte a proteger tu hogar o negocio
-      con tecnología de vanguardia y tarifas justas.
-      </p> 
-      <p>
-      ¡Gracias por visitar
-      este espacio!
-    </p>
-  </section>
-
-  <hr />
-
-  <section id="servicios">
-    <h2>Servicios</h2>
-    <div class="services-container">
-      <!-- 12 tarjetas de servicio -->
-      <div class="service-card">
-        <i class="fas fa-bell"></i>
-        <h3>Alarmas de seguridad</h3>
-        <p>Sensores de movimiento, apertura, vibración y contacto magnético.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-video"></i>
-        <h3>Cámaras IP y DVR</h3>
-        <p>Grabación por detección de movimiento y acceso remoto.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-thermometer-half"></i>
-        <h3>Sensores ambientales</h3>
-        <p>Monitoreo de gas, humo, temperatura y humedad.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-users"></i>
-        <h3>Alarmas vecinales</h3>
-        <p>Control colaborativo por Bluetooth o RF en tu barrio.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-print"></i>
-        <h3>Impresión 3D</h3>
-        <p>Soportes, carcasas y prototipos personalizados.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-microchip"></i>
-        <h3>Automatización IoT</h3>
-        <p>Control de luces, persianas y electrodomésticos con Arduino/ESP32.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-key"></i>
-        <h3>Control de acceso</h3>
-        <p>RFID, teclado numérico y reconocimiento facial.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-broadcast-tower"></i>
-        <h3>Notificaciones en tiempo real</h3>
-        <p>Alertas instantáneas vía Wi-Fi, SMS o Bluetooth.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-robot"></i>
-        <h3>Asistentes virtuales</h3>
-        <p>Integración con Google Home, Alexa y otros asistentes.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-chart-line"></i>
-        <h3>Monitoreo de datos</h3>
-        <p>Visualización de calidad de aire y consumo energético.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-project-diagram"></i>
-        <h3>Prototipos a medida</h3>
-        <p>Diseño y construcción de hardware único.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-bolt"></i>
-        <h3>Eficiencia energética</h3>
-        <p>Mantenimiento predictivo y optimización de recursos.</p>
+      <div class="hero-btns">
+        <a href="#packs" class="btn btn-primary">Ver Equipos</a>
+        <a href="#planes" class="btn btn-secondary">Ver Planes</a>
       </div>
     </div>
   </section>
 
-  <hr />
+  <hr class="neon-divider" />
+
+  <section id="packs">
+    <h2>Nuestros Packs de Seguridad</h2>
+    <p class="section-subtitle">Hardware robusto con carcasas impresas en 3D personalizadas.</p>
+    
+    <div class="services-container">
+      <div class="service-card pack-card">
+        <div class="icon-box"><i class="fas fa-door-closed"></i></div>
+        <h3>PACK 1: ACCESO SEGURO</h3>
+        <p class="pack-target">Ideal Departamentos y Oficinas</p>
+        <ul class="pack-list">
+          <li><i class="fas fa-check"></i> Central ESP32 WiFi</li>
+          <li><i class="fas fa-check"></i> 3x Sensores Magnéticos</li>
+          <li><i class="fas fa-check"></i> Sirena Interior</li>
+          <li><i class="fas fa-check"></i> Control vía Telegram</li>
+        </ul>
+        <a href="#contacto" class="btn btn-small">Consultar Pack 1</a>
+      </div>
+
+      <div class="service-card pack-card featured-pack">
+        <div class="ribbon">Más Vendido</div>
+        <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+        <h3>PACK 2: SENTINEL 360</h3>
+        <p class="pack-target">Casas y Comercios</p>
+        <ul class="pack-list">
+          <li><i class="fas fa-check"></i> <strong>Todo lo del Pack 1</strong></li>
+          <li><i class="fas fa-check"></i> 2x Sensores de Movimiento (PIR)</li>
+          <li><i class="fas fa-check"></i> Carcasas 3D de Diseño</li>
+          <li><i class="fas fa-check"></i> Sirena Exterior Potente</li>
+          <li><i class="fas fa-check"></i> Batería de Respaldo</li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary">Consultar Pack 2</a>
+      </div>
+
+      <div class="service-card pack-card">
+        <div class="icon-box"><i class="fas fa-laser"></i></div>
+        <h3>PACK 3: PERÍMETRO LÁSER</h3>
+        <p class="pack-target">Jardines y Patios</p>
+        <ul class="pack-list">
+          <li><i class="fas fa-check"></i> <strong>Seguridad Perimetral</strong></li>
+          <li><i class="fas fa-check"></i> Barreras Infrarrojas Activas</li>
+          <li><i class="fas fa-check"></i> Cámara ESP32-CAM Integrada</li>
+          <li><i class="fas fa-check"></i> Foto-Verificación al celular</li>
+          <li><i class="fas fa-check"></i> Gabinetes Estancos (Sol/Lluvia)</li>
+        </ul>
+        <a href="#contacto" class="btn btn-small">Consultar Pack 3</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="neon-divider" />
+
+  <section id="planes">
+    <h2>Planes de Monitoreo & Soporte</h2>
+    <p class="section-subtitle">Duerma tranquilo. Nosotros vigilamos que su sistema funcione.</p>
+
+    <div class="pricing-container services-container">
+      
+      <div class="service-card pricing-card">
+        <h3>CONNECT</h3>
+        <div class="price">Básico</div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-robot"></i> Bot de Telegram Premium</li>
+          <li><i class="fas fa-bell"></i> Notificaciones Instantáneas</li>
+          <li><i class="fas fa-heartbeat"></i> Monitoreo de "Latido" (Online)</li>
+          <li><i class="fas fa-tools"></i> Soporte Reactivo</li>
+        </ul>
+      </div>
+
+      <div class="service-card pricing-card featured-pricing">
+        <h3>SHIELD</h3>
+        <div class="price">Recomendado</div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-star"></i> <strong>Todo lo de Connect</strong></li>
+          <li><i class="fas fa-sim-card"></i> <strong>Chip GSM Anti-Corte</strong></li>
+          <li><i class="fas fa-file-invoice"></i> Reporte Mensual de Estado</li>
+          <li><i class="fas fa-calendar-check"></i> 1 Visita Anual de Mantenimiento</li>
+          <li><i class="fas fa-whatsapp"></i> Soporte Prioritario WhatsApp</li>
+        </ul>
+      </div>
+
+      <div class="service-card pricing-card">
+        <h3>PRIME</h3>
+        <div class="price">VIP</div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-crown"></i> <strong>Todo lo de Shield</strong></li>
+          <li><i class="fas fa-video"></i> Verificación Visual Remota</li>
+          <li><i class="fas fa-screwdriver-wrench"></i> <strong>Garantía Total de Hardware</strong></li>
+          <li><i class="fas fa-headset"></i> Atención 24/7</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="neon-divider" />
+
+  <section id="servicios">
+    <h2>Servicios Adicionales</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <i class="fas fa-print"></i>
+        <h3>Impresión 3D</h3>
+        <p>Diseño de piezas, repuestos y prototipado.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-microchip"></i>
+        <h3>Automatización IoT</h3>
+        <p>Domótica a medida con Arduino/ESP32.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-users"></i>
+        <h3>Alarmas Vecinales</h3>
+        <p>Sistemas comunitarios colaborativos.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-bolt"></i>
+        <h3>Eficiencia Energética</h3>
+        <p>Optimización de consumo eléctrico.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="neon-divider" />
 
   <section id="sobremi">
-    <h2>Sobre mí</h2>
-    <p>
-      Mi nombre es Maximiliano, soy un apasionado de la tecnología y el
-      aprendizaje autodidacta. Domino el español e inglés, y afronto el
-      desafío de aprender alemán.
-    </p>
-    <p>
-      Fui parte de la Policía Federal Argentina, donde adquirí experiencia
-      práctica en seguridad. Paralelamente, estudio música y me desempeño
-      como profesional en sistemas, lo que me permite fusionar el rigor técnico
-      con la creatividad.
-    </p>
-    <p>
-      Cada proyecto que emprendo está pensado para adaptarse a tu necesidad
-      real, sin intermediarios ni costos ocultos. Detrás de cada solución
-      integral hay una persona que entiende tus prioridades y trabaja para
-      proteger lo que más valoras.
-    </p>
+    <h2>Sobre Mí</h2>
+    <div class="about-content">
+      <p>
+        <strong>Soy Maximiliano.</strong> Ex-Policía Federal, Músico y Profesional en Sistemas. 
+        Fusiono la disciplina de la seguridad operativa con la creatividad de la ingeniería.
+      </p>
+      <p>
+        En FerraTeck no hablas con vendedores. Hablas con quien diseña, suelda, programa e instala tu sistema.
+        Hablo Español, Inglés y estoy aprendiendo Alemán. Mi compromiso es tu tranquilidad.
+      </p>
+    </div>
   </section>
 
-  <hr />
-
-  <section id="soporte">
-    <h2>Soporte</h2>
-    <p>Ofrecemos un esquema de soporte inicial, intermedio y completo mediante suscripción mensual.</p>
-    <p>Todos nuestros productos cuentan con soporte según el plan que elijas, asegurando continuidad y asistencia técnica.</p>
-    <p>Nuestros abonos contemplan desde atención L a V de 9:00 a 18:00 hasta asistencia 24/7/365.</p>
-    <p>También disponés de mantenimiento a domicilio con cambio de componentes según tu plan.</p>
-  </section>
-
-  <hr />
+  <hr class="neon-divider" />
 
   <section id="contacto">
-    <h2>Contacto</h2>
-    <form id="contact-form" action="https://formspree.io/f/yourFormId" method="POST">
+    <h2>Inicia tu Proyecto</h2>
+    <form id="contact-form" action="https://formspree.io/f/TU_ID_DE_FORMSPREE_AQUI" method="POST">
       <div class="form-group">
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <label for="email">Email / WhatsApp</label>
+        <input type="text" id="email" name="email" required placeholder="¿Dónde te contacto?">
       </div>
       <div class="form-group">
-        <label for="asunto">Asunto</label>
-        <input type="text" id="asunto" name="asunto">
+        <label for="asunto">Me interesa el Pack / Plan:</label>
+        <select id="asunto" name="asunto">
+          <option value="Consulta General">Consulta General</option>
+          <option value="Pack 1 - Acceso">Pack 1: Acceso Seguro</option>
+          <option value="Pack 2 - Sentinel 360">Pack 2: Sentinel 360</option>
+          <option value="Pack 3 - Láser">Pack 3: Perímetro Láser</option>
+          <option value="Servicio Técnico">Servicio Técnico</option>
+        </select>
       </div>
       <div class="form-group">
-  <label for="mensaje">Mensaje</label>
-  <textarea
-    id="mensaje"
-    name="mensaje"
-    rows="4"
-    required
-    placeholder="Escriba su consulta..."
-  ></textarea>
-</div>
-<button type="submit">Enviar mensaje</button>
-<p id="form-response" class="form-response"></p>
-
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Cuéntame sobre tu propiedad..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Solicitar Presupuesto</button>
+      <p id="form-response" class="form-response"></p>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 FerraTeck Systems</p>
+    <p>&copy; 2025 FerraTeck Systems | Powered by Sentinel AI</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
   </footer>
 
   <script>
@@ -208,11 +236,11 @@
           headers: { 'Accept': 'application/json' }
         });
         responseMsg.textContent = res.ok
-          ? '¡Mensaje enviado correctamente! Te responderé pronto.'
-          : 'Error al enviar el mensaje. Intentá nuevamente.';
-        form.reset();
+          ? '¡Solicitud enviada! Maximiliano te contactará pronto.'
+          : 'Error al enviar. Por favor intenta de nuevo.';
+        if(res.ok) form.reset();
       } catch {
-        responseMsg.textContent = 'Error de red. Verificá tu conexión.';
+        responseMsg.textContent = 'Error de conexión.';
       }
     });
   </script>
