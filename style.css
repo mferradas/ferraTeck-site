@@ -1,16 +1,17 @@
-/* ============================ */
-/* Variables globales          */
-/* ============================ */
+/* ========================================= */
+/* 1. VARIABLES GLOBALES (El corazón del color) */
+/* ========================================= */
 :root {
-  --neon-green:  #39ff14;
-  --neon-teal:   #00f5d4;
-  --bg-color:    #000;
-  --text-color:  #e5e5e5;
+  --neon-green: #39ff14;
+  --neon-teal:  #00f5d4;
+  --bg-color:   #050505; /* Un negro apenas más suave para profundidad */
+  --text-color: #e5e5e5;
+  --card-bg:    rgba(10, 10, 10, 0.85); /* Fondo semitransparente para tarjetas */
 }
 
-/* ============================ */
-/* Reset y globales             */
-/* ============================ */
+/* ========================================= */
+/* 2. RESET Y BASES                          */
+/* ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -23,176 +24,380 @@ body {
   font-family: 'Rajdhani', sans-serif;
   line-height: 1.6;
   text-align: center;
-  padding: 1rem;
+  /* Eliminamos padding global para que el Hero ocupe todo el ancho */
+  padding: 0; 
 }
 
-/* ============================ */
-/* Encabezados                  */
-/* ============================ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========================================= */
+/* 3. TIPOGRAFÍA Y ENCABEZADOS               */
+/* ========================================= */
 h1, h2, h3 {
   font-family: 'Orbitron', sans-serif;
   font-weight: 500;
   margin-bottom: 0.5em;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--neon-green);
-  animation: neonFlicker 3s infinite ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px rgba(57, 255, 20, 0.3);
+  margin-top: 0; /* Fix para espaciado */
 }
 
-/* ============================ */
-/* Línea divisoria              */
-/* ============================ */
-hr {
-  border: none;
-  height: 2px;
-  background: var(--neon-green);
-  margin: 2rem 0;
+/* Subtítulos de sección */
+.section-subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
 }
 
-/* ============================ */
-/* Menú neón                     */
-/* ============================ */
+/* ========================================= */
+/* 4. HEADER Y MENÚ NEÓN                     */
+/* ========================================= */
+header {
+  background: #000;
+  padding-bottom: 1rem;
+}
+
+.logo-container h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.highlight {
+  color: var(--neon-teal);
+}
+
 .neon-menu {
   width: 100%;
   background: linear-gradient(90deg, var(--neon-green), var(--neon-teal));
   padding: 0.5rem 0;
-  box-shadow: 0 0 10px var(--neon-green);
-  margin-bottom: 2rem;
+  box-shadow: 0 0 15px var(--neon-green);
+  position: sticky; /* Menú se queda arriba */
+  top: 0;
+  z-index: 1000;
 }
 
 .neon-menu ul {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   list-style: none;
+  flex-wrap: wrap; /* Para móviles */
 }
 
 .neon-menu a {
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #000;
   text-decoration: none;
   padding: 0.5rem 1rem;
+  font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .neon-menu a:hover {
   color: #fff;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px var(--neon-teal),
-    0 0 20px var(--neon-teal);
+  text-shadow: 0 0 5px #fff;
 }
 
-/* ============================ */
-/* Animación flicker            */
-/* ============================ */
-@keyframes neonFlicker {
-  0%,100% {
-    color: var(--neon-green);
-    text-shadow:
-      0 0 4px var(--neon-green),
-      0 0 10px var(--neon-green);
-  }
-  50% {
-    color: var(--neon-teal);
-    text-shadow:
-      0 0 4px var(--neon-teal),
-      0 0 10px var(--neon-teal);
-  }
+/* ========================================= */
+/* 5. SECCIÓN HERO (NUEVO)                   */
+/* ========================================= */
+.hero {
+  padding: 5rem 1rem;
+  background: radial-gradient(circle at center, rgba(57, 255, 20, 0.08) 0%, transparent 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
 }
 
-/* ============================ */
-/* Secciones centrales          */
-/* ============================ */
-section {
+.hero-content {
   max-width: 800px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  background: rgba(255,255,255,0.03);
 }
 
-section p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  line-height: 1.8;
+.hero-btns {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
-/* ============================ */
-/* Servicios en grid            */
-/* ============================ */
-#servicios {
-  max-width: 900px;
+/* ========================================= */
+/* 6. BOTONES (ESTILOS NUEVOS)               */
+/* ========================================= */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: var(--neon-green);
+  color: #000;
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  box-shadow: 0 0 25px #fff;
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--neon-teal);
+  color: var(--neon-teal);
+}
+
+.btn-secondary:hover {
+  background-color: var(--neon-teal);
+  color: #000;
+  box-shadow: 0 0 15px var(--neon-teal);
+}
+
+.btn-small {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  background: transparent;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.btn-small:hover {
+  background: var(--neon-green);
+  color: #000;
+}
+
+/* ========================================= */
+/* 7. ESTRUCTURA GENERAL DE SECCIONES        */
+/* ========================================= */
+section {
+  max-width: 1200px; /* Ancho máximo aumentado para las grids */
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
 }
 
+/* Línea divisoria */
+.neon-divider {
+  border: none;
+  height: 2px;
+  background: var(--neon-green);
+  margin: 0;
+  opacity: 0.5;
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+/* Grid Container General */
 .services-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Tarjetas más anchas */
+  gap: 2rem;
+  padding: 1rem;
 }
 
+/* ========================================= */
+/* 8. TARJETAS (Base para Packs y Servicios) */
+/* ========================================= */
 .service-card {
-  background: rgba(0,0,0,0.3);
-  border: 2px solid var(--neon-green);
-  border-radius: 8px;
-  padding: 1.5rem 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--neon-green);
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
   transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative; /* Para el ribbon */
 }
 
-.service-card i {
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--neon-teal);
+  box-shadow: 0 0 15px rgba(0, 245, 212, 0.4);
+}
+
+.icon-box {
   font-size: 3rem;
   color: var(--neon-green);
-  margin-bottom: 0.5rem;
-  transition: color 0.3s, text-shadow 0.3s;
+  margin-bottom: 1rem;
 }
 
 .service-card h3 {
   color: var(--neon-green);
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-.service-card p {
-  font-size: 0.9rem;
-  line-height: 1.4;
+/* ========================================= */
+/* 9. ESTILOS ESPECÍFICOS: PACKS             */
+/* ========================================= */
+.pack-target {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
 }
 
-.service-card:hover {
-  transform: scale(1.05);
-  border-color: var(--neon-teal);
-  box-shadow:
-    0 0 8px var(--neon-teal),
-    0 0 16px rgba(0,245,212,0.5);
+.pack-list {
+  list-style: none;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1.5rem;
 }
 
-.service-card:hover i {
+.pack-list li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.pack-list li i {
   color: var(--neon-teal);
-  text-shadow:
-    0 0 8px var(--neon-teal),
-    0 0 16px rgba(0,245,212,0.5);
+  margin-right: 10px;
+  min-width: 20px;
 }
 
-/* ============================ */
-/* Formulario de Contacto       */
-/* ============================ */
+/* Ribbon de Destacado */
+.featured-pack {
+  border: 2px solid var(--neon-teal);
+  box-shadow: 0 0 20px rgba(0, 245, 212, 0.15);
+  transform: scale(1.02); /* Un poco más grande por defecto */
+}
+
+.ribbon {
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background: var(--neon-teal);
+  color: #000;
+  padding: 5px 40px;
+  transform: rotate(45deg);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+/* ========================================= */
+/* 10. ESTILOS ESPECÍFICOS: PRECIOS          */
+/* ========================================= */
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pricing-card {
+  /* Hereda de service-card pero ajustamos */
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  border: 1px solid #444; /* Borde más sutil por defecto */
+}
+
+.pricing-card h3 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.price {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.3rem;
+  color: var(--neon-teal);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.pricing-features {
+  list-style: none;
+  width: 100%;
+  text-align: left;
+  padding: 0 0.5rem;
+}
+
+.pricing-features li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #222;
+}
+
+.pricing-features li i {
+  color: var(--neon-green);
+  margin-right: 10px;
+}
+
+/* Tarjeta de Precio Destacada (SHIELD) */
+.featured-pricing {
+  border: 2px solid var(--neon-green);
+  background: rgba(57, 255, 20, 0.05);
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.featured-pricing h3 {
+  color: var(--neon-teal);
+}
+
+/* ========================================= */
+/* 11. FORMULARIO DE CONTACTO                */
+/* ========================================= */
 #contacto form {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
+  background: rgba(255,255,255,0.02);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #333;
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   display: flex;
   flex-direction: column;
 }
@@ -204,77 +409,79 @@ section p {
 }
 
 .form-group input,
-.form-group textarea {
-  padding: 0.75rem;
-  border: 1px solid var(--neon-green);
-  border-radius: 7px;
-  background: transparent;
-  color: var(--text-color);
+.form-group textarea,
+.form-group select {
+  padding: 0.8rem;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  font-family: inherit;
   transition: border-color 0.3s;
+  width: 100%;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--neon-teal);
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--neon-green);
   outline: none;
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.2);
 }
 
 #contacto button {
-  background: var(--neon-green);
-  border: none;
-  color: var(--bg-color);
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-#contacto button:hover {
-  background: var(--neon-teal);
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .form-response {
   margin-top: 1rem;
-  font-size: 1rem;
+  text-align: center;
   color: var(--neon-teal);
 }
 
-/* ============================ */
-/* Adaptaciones móviles         */
-/* ============================ */
-@media (max-width: 600px) {
-  body { padding: 0.5rem; }
-  section { padding: 1.5rem 0.5rem; }
-  .neon-menu a { font-size: 1rem; padding: 0.4rem 0.8rem; }
+/* ========================================= */
+/* 12. FOOTER                                */
+/* ========================================= */
+footer {
+  padding: 2rem;
+  background: #000;
+  border-top: 1px solid #222;
+  margin-top: 2rem;
 }
 
-/* Formulario compacto */
-#contacto form {
-  max-width: 500px; /* más estrecho */
-  margin: 0 auto;
-  text-align: left;
+.social-links {
+  margin-top: 1rem;
 }
 
-.form-group {
-  margin-bottom: 0.75rem; /* menos espacio entre campos */
+.social-links a {
+  color: var(--neon-green);
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s;
 }
 
-.form-group input,
-.form-group textarea {
-  padding: 0.5rem;      /* menos padding interno */
-  font-size: 0.95rem;   /* tamaño de texto ligeramente menor */
+.social-links a:hover {
+  color: var(--neon-teal);
 }
 
-#contacto textarea {
-  resize: vertical;     /* permite solo cambio de alto */
-}
-
-#contacto button {
-  padding: 0.5rem 1rem;  /* botón más compacto */
-  font-size: 0.9rem;
-}
-
-.form-response {
-  margin-top: 0.75rem;  /* menos separación tras enviar */
-  font-size: 0.9rem;
+/* ========================================= */
+/* 13. ADAPTACIONES MÓVILES                  */
+/* ========================================= */
+@media (max-width: 768px) {
+  .logo-container h1 { font-size: 2rem; }
+  .neon-menu ul { gap: 0.5rem; }
+  .neon-menu a { font-size: 0.9rem; padding: 0.5rem; }
+  .hero { padding: 3rem 1rem; text-align: center; }
+  .hero h2 { font-size: 2rem; }
+  
+  .hero-btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn { width: 100%; text-align: center; }
+  
+  .featured-pricing { transform: none; margin: 1rem 0; }
+  .featured-pack { transform: none; }
 }
